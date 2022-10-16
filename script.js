@@ -1,6 +1,46 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+const lenght = "";
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+const number = "01234567890";
+const symbol = "!@£$%^&*_+-";
+
+function checklength(lenght) {
+  if (length <= 8 || lenght >= 128) {
+    window.alert("Invalid Entry. Please choose a password length between 8 and 128")
+    generatePassword();
+  }
+  return lenght;
+}
+
+function generatePassword() {
+let enteredlength = 0;
+enteredlength = window.prompt("Please choose the length of your password");
+console.log(enteredlength);
+//Check
+if (enteredlength <= 8 || enteredlength >=128){
+window.alert("Invalie Entry. Please choose a password length between 8 and 128")
+return;
+}
+
+const numberResult = window.confirm("would you like to incliude numbers?");
+const symbolResult = window.confirm("would you like to include speacial characters?");
+const upperResult = window.confirm("would like to include uppercase letters?");
+const lowerResult = window.confirm("would you like to include lowercase letters?");
+
+let arrayResult = [];
+let userResult = [];
+if (numberResult) {
+  arrayResult = arrayResult.concat(number.split(""))
+}
+
+
+}
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
