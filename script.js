@@ -37,9 +37,26 @@ if (numberResult) {
   arrayResult = arrayResult.concat(number.split(""))
 }
 
-
+if (symbolResult) {
+  arrayResult = arrayResult.concat(symbol.split(""))
 }
 
+if (upperResult) {
+  arrayResult = arrayResult.concat(upperCase.split(""))
+}
+
+if (lowerResult) {
+  arrayResult = arrayResult.concat(lowerCase.split(""))
+}
+
+console.log(enteredlength);
+for (let i = 0; i < enteredlength;i++) {
+  userResult.push(arrayResult[Math.floor(Math.random()+ arrayResult.length)]);
+}
+
+return userResult.join("");
+
+}
 
 // Write password to the #password input
 function writePassword() {
